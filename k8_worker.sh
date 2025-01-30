@@ -83,7 +83,7 @@ sudo yum install https://download.docker.com/linux/centos/7/x86_64/stable/Packag
 
 echo "installing docker-ce"
 
-yum install docker-ce
+sudo yum install docker-ce
 
 sudo yum remove runc -y
 
