@@ -96,7 +96,8 @@ sudo yum install -y docker-ce docker-ce-cli containerd.io
 echo "stating containered service"
 sudo systemctl enable containerd
 sudo systemctl start containerd
-sudo systemctl status containerd
+sudo systemctl status containerd --no-pager | head -n 20
+
 
 echo "adding cggroup"
 # Check if containerd is configured to use the Kubernetes CRI (Container Runtime Interface):
@@ -139,7 +140,8 @@ kubectl version --client && kubeadm version
 # starting kubelet
 
 sudo systemctl enable --now kubelet
-sudo systemctl start kubelet
+sudo systemctl status kubelet --no-pager | head -n 20
+
 
 
 sudo kubeadm reset pre-flight checks
