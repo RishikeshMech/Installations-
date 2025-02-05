@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "This Script will help you to set up k8 master node" 
+echo "This Script will help you to set up k8 worker node" 
 
 sudo yum update -y
 
