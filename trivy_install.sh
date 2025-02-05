@@ -2,15 +2,6 @@
 
 #============== Below steps will help for sonarqube installation 
 
-sudo apt install -y wget apt-transport-https gnupg lsb-release
-
-wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
-
-echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
-
-sudo apt update
-
-sudo apt install -y trivy
+sudo rpm -ivh https://github.com/aquasecurity/trivy/releases/download/v0.37.3/trivy_0.37.3_Linux-64bit.rpm
 
 trivy --version
-
